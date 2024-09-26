@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML Website - Contact</title>
+
+    <meta name="description" content="A simple HTML-only website for roadmap.sh frontend" />
+    <meta name="keywords" content="Frontend Project, HTML, Roadmap.sh" />
+    <meta name="author" content="Braian Nuñez" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <meta property="og:title" content="Braian Nuñez - Junior Frontend Developer WEB">
+    <meta property="og:description" content="Explore the skills, experience, and education of Junior Frontend Developer Braian Nuñez.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="link_to_your_image.jpg">
 </head>
 <body>
     <header>
         <nav>
             <div>
-                <img src="" alt="logo">
+                <a href="index.html" aria-label="Homepage">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-cv" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <title>CV Icon</title>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                        <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+                        <path d="M13 11l1.5 6l1.5 -6" />
+                    </svg>
+                </a>
                 <p>your name</p>
             </div>
             <div>
@@ -22,5 +42,27 @@
             </div>
         </nav>
     </header>
+    <main>
+        <h1>Contact Me</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="John Doe" name="name" autocomplete="name" required>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="example@example.com" name="email" autocomplete="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="messageHelp" required></textarea>
+            <small id="messageHelp">Please leave your message here.</small>
+  
+            <button type="submit" aria-label="Send your message">Send Message</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> all rights reserved</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
 </body>
 </html>
