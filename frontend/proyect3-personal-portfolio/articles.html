@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Website - Articles</title>
+
+    <meta name="description" content="A simple HTML-only website for roadmap.sh frontend" />
+    <meta name="keywords" content="Frontend Project, HTML, Roadmap.sh" />
+    <meta name="author" content="Braian Nuñez" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <meta property="og:title" content="Braian Nuñez - Junior Frontend Developer WEB">
+    <meta property="og:description" content="Explore the skills, experience, and education of Junior Frontend Developer Braian Nuñez.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="header-logo">
+                <a href="index.html" aria-label="Homepage">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-cv" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <title>CV Icon</title>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                        <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+                        <path d="M13 11l1.5 6l1.5 -6" />
+                    </svg>
+                </a>
+                <p>Braian Nuñez</p>
+            </div>
+            <div class="header-container-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="page-articles">
+       <section aria-labelledby="articles">
+            <h1 id="articles">Articles</h1>
+            <ul>
+                <li>
+                  <h2><a href="#" aria-label="Read article: The Importance of Semantic HTML">The Importance of Semantic HTML</a></h2>
+                  <p>A deep dive into why semantic HTML is crucial for accessibility and SEO.</p>
+                </li>
+                <li>
+                  <h2><a href="#" aria-label="Read article: Understanding Flexbox: A Beginner's Guide">Understanding Flexbox: A Beginner's Guide</a></h2>
+                  <p>An introduction to the Flexbox layout model, with practical examples and use cases.</p>
+                </li>
+                <li>
+                  <h2><a href="#" aria-label="Read article: Building Responsive Web Apps with CSS Grid">Building Responsive Web Apps with CSS Grid</a></h2>
+                  <p>A tutorial on using CSS Grid to create responsive, modern web designs.</p>
+                </li>
+              </ul>
+       </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> all rights reserved</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>

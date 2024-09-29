@@ -1,0 +1,621 @@
+/* NORMALIZE STYLES */
+@import 'normalize.css';
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+/* VARIABLES */
+@import 'variables.css';
+
+/* GLOBAL STYLES */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-optical-sizing: auto;
+    font-size: 1.6rem;
+    margin: 2rem;
+    border: 2px solid var(--primaryColor);
+    color: var(--primaryColor);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-block: 2rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header {
+        justify-content: flex-start;
+        padding: 2rem 0 0 0;
+    }
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header-logo {
+        flex-direction: row;
+    }
+}
+
+.header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .header nav {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding: 0 2rem;
+    }
+}
+
+.header-container-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-container-links ul {
+        flex-direction: row;
+    }
+}
+
+.header-container-links li {
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+@media (min-width: 768px) {
+    .header-container-links li {
+        border: none;
+    }
+    .header-container-links li::after {
+        content: "/";
+        margin-left: 1rem;
+    }
+    
+    .header-container-links li:last-of-type::after {
+        content: "0";
+        display: none;
+    } 
+}
+
+.header-container-links li {
+    transition: color 200ms ease;
+}
+
+.header-container-links li:hover {
+    color: var(--secondaryColor);
+    border-color: var(--secondaryColor);
+    transition: color 200ms ease-in;
+}
+
+.header-container-links a {
+    font-size: 1.8rem;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid var(--primaryColor);
+}
+
+@media (min-width: 768px) {
+    .title {
+        min-height: 25rem;
+        padding: 0;
+    }
+}
+
+.title h1 {
+    font-family: "Single Day", system-ui;
+}
+
+@media (min-width: 768px) {
+    .title h1 {
+        font-size: 7rem;
+    }
+}
+
+.title p {
+    color: var(--secondaryColor);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+.projects {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .projects {
+        border-right: 3px solid var(--primaryColor);
+    }
+}
+
+.projects h2,
+.work-experience h2,
+.education h2,
+.reviews h2,
+.footer {
+    font-family: "Single Day", system-ui;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .projects h2,
+    .work-experience h2,
+    .education h2 {
+        text-align: left;
+    }
+
+    .projects h2 {
+        padding-left: 2rem;
+    }
+
+    .work-experience h2 {
+        padding-left: 2rem;
+    }
+}
+
+.projects ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--secondaryColor);
+}
+
+@media (min-width: 1024px) {
+    .projects ul {
+        background-color: transparent;
+        text-align: left;
+    }
+}
+
+.projects li {
+    padding: 1rem 0;
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.projects li:nth-child(odd) {
+    border-block: 3px solid var(--primaryColor);
+}
+
+@media (min-width: 1024px) {
+    .projects li {
+        padding: 2rem;
+    }
+    .projects li:nth-child(odd) {
+        border: none;
+    }
+    .projects li,
+    .projects li:nth-child(odd) {
+        border-bottom: 3px solid var(--primaryColor);
+    }
+    .projects li:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.work-experience div {
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--secondaryColor);
+    border-top: 3px solid var(--primaryColor);
+    border-bottom: 3px solid var(--primaryColor);
+}
+
+@media (min-width: 1024px) {
+    .work-experience div {
+        background-color: transparent;
+        border: none;
+        padding-left: 3rem 0;
+    }
+    .work-experience div:last-of-type {
+        border-top: 3px solid var(--primaryColor);
+    }
+}
+
+.work-experience h3 {
+    font-family: "Single Day", system-ui;
+    font-size: 2rem;
+}
+
+.work-experience p {
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    .work-experience p {
+        margin: 1rem 0;
+    }
+}
+
+.work-experience a {
+    color: var(--blueColor);
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    .education {
+        border-left: 3px solid var(--primaryColor);
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.education p,
+.education ol {
+    padding: 0 2rem;
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    .education p,
+    .education ol {
+        padding: 0;
+    }
+}
+
+.education p:last-of-type {
+    margin: 1rem 0;
+}
+
+.education ol li::before {
+    content: "-";
+    margin-right: .5rem;
+}
+
+.reviews {
+    margin-top: 1rem;
+    border-top: 3px solid var(--primaryColor);
+}
+
+@media (min-width: 1024px) {
+    .reviews {
+        margin-top: 0;
+    }
+}
+
+.reviews div {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .reviews div {
+        flex-direction: row;
+        padding: 2rem 2rem;
+    }
+}
+
+.reviews blockquote {
+    margin: 0 auto;
+    border: 3px solid var(--primaryColor);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 30rem;
+}
+
+@media (min-width: 768px) {
+    .reviews blockquote {
+        max-width: 25rem;
+    }
+}
+
+.reviews blockquote p {
+    font-weight: bold;
+}
+
+.reviews blockquote footer {
+    color: var(--secondaryColor);
+}
+
+.footer {
+    margin-top: 2rem;
+    border-top: 3px solid var(--primaryColor);
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 3rem 0;
+    }
+}
+
+.page-projects h1,
+.page-projects h2,
+.page-articles h1,
+.page-articles h2,
+.page-contact h1,
+.page-contact button {
+    font-family: "Single Day", system-ui;
+}
+
+.page-projects h1,
+.page-articles h1,
+.page-contact h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .page-projects h1,
+    .page-articles h1,
+    .page-contact h1 {
+        font-size: 7rem;
+    }
+}
+
+.page-projects ul,
+.page-articles ul {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .page-projects ul,
+    .page-articles ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+.page-projects li,
+.page-articles li {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    border-top: 3px solid var(--primaryColor);
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .page-projects li,
+    .page-articles li {
+        border: 2px solid var(--secondaryColor);
+        width: 30rem;
+    }
+}
+
+.page-projects li:last-of-type,
+.page-articles li:last-of-type {
+    padding-bottom: 0;
+}
+
+.page-projects li p,
+.page-articles li p {
+    font-weight: bold;
+}
+
+.page-projects li a {
+    color: var(--blueColor);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.page-articles li a {
+    text-decoration: underline;
+    color: var(--blueColor);
+}
+
+.page-contact form {
+    width: 90%;
+    max-width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-contact label {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.page-contact input,
+.page-contact textarea {
+    color: var(--primaryColor);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondaryColor);
+    transition: 200ms ease border;
+}
+
+.page-contact input:focus,
+.page-contact textarea:focus {
+    outline: none;
+    border: 1px solid var(--blueColor);
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+.page-contact small {
+    color: var(--secondaryColor);
+}
+
+.page-contact button {
+    margin-top: 1rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--blueColor);
+    padding: 1.6rem;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    transition: opacity 200ms ease;
+}
+
+.page-contact button:hover,
+.page-contact button:focus {
+    outline: none;
+    opacity: 75%;
+    transition: opacity 200ms ease-in;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--primaryColor);
+        border-color: white;
+        color: var(--secondaryColor);
+    }
+    .header {
+        p, 
+        li {
+            color: var(--secondaryColor);
+        }
+        .header-container-links li {
+            border-color: var(--secondaryColor);
+        }
+        .header-container-links li:hover {
+            color: white;
+            border-color: white;
+        }
+    }
+    .title {
+        border-bottom-color: white;
+        h1 {
+            color: white;
+        }
+    }
+    .grid {
+        h2 {
+            color: white;
+        }
+        .projects li:nth-child(odd) {
+            border-block: 3px solid white;
+        }
+        .projects ul,
+        .work-experience ul {
+            background-color: var(--secondaryColor);
+        }
+        .work-experience div {
+            border-top-color: white;
+            border-bottom-color: white;
+        }        
+        .work-experience h3,
+        .work-experience p {
+            color: var(--primaryColor);
+        }
+        @media (min-width: 1024px) {
+            .projects {
+                border-right-color: white;
+                ul {
+                    background-color: var(--primaryColor);
+                }
+                li {
+                    color: var(--secondaryColor);
+                }
+            }
+            .work-experience div:last-of-type {
+                border-top: 3px solid white;
+            }
+            .work-experience h3,
+            .work-experience p {
+                color: var(--secondaryColor);
+            }
+            .education {
+                border-left-color: white;
+            }
+        }
+    }
+    .reviews {
+        border-top-color: white;
+
+        h2,
+        blockquote {
+            color: white;
+            border-color: white;
+        }
+    }
+    .page-projects h1,
+    .page-projects h2,
+    .page-articles h1,
+    .page-contact h1 {
+        color: white;
+    }
+    .page-projects li,
+    .page-articles li {
+        border-color: white;
+    }
+    .page-contact {
+        label {
+            color: white;
+        }
+        input,
+        textarea {
+            background-color: var(--secondaryColor);
+        }
+    }
+}

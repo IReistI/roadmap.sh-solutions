@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Home</title>
+
+    <meta name="description" content="A simple Personal Porfolio website for roadmap.sh frontend" />
+    <meta name="keywords" content="Frontend Project, HTML, Roadmap.sh" />
+    <meta name="author" content="Braian Nuñez" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <meta property="og:title" content="Braian Nuñez - Junior Frontend Developer WEB">
+    <meta property="og:description" content="Explore the skills, experience, and education of Junior Frontend Developer Braian Nuñez.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="header-logo">
+                <a href="index.html" aria-label="Homepage">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-cv" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <title>CV Icon</title>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                        <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+                        <path d="M13 11l1.5 6l1.5 -6" />
+                    </svg>
+                </a>
+                <p>Braian Nuñez</p>
+            </div>
+            <div class="header-container-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="title">
+            <h1>Frontend Developer</h1>
+            <p>html only with proper layout, no styling</p>
+        </div>
+
+        <div class="grid">
+            <section id="projects" class="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="#">HTML Only Porfolio</a></li>
+                    <li><a href="#">Calculator</a></li>
+                    <li><a href="#">Quiz App</a></li>
+                    <li><a href="#">Countdown Timer</a></li>
+                    <li><a href="#">Product Upcoming Page</a></li>
+                </ul>
+            </section>
+    
+            <section id="work-experience" class="work-experience">
+                <h2>Work Experience</h2>
+                <div>
+                    <h3>roadmap.sh</h3>
+                    <p>Solved all the frontend projects</p>
+                    <a href="#">Visit my Profile</a>
+                </div>
+                <div>
+                    <h3>OpenSource Work</h3>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 Github Stars.</p>
+                    <a href="#">Visit my GitHub Profile</a>
+                </div>
+            </section>
+    
+            <section id="education" class="education">
+                <h2>Education</h2>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+    
+                <p>Courses I took:</p>
+    
+                <ol>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discrete Mathematics</li>
+                </ol>
+            </section>
+        </div>
+
+
+        <section id="reviews" class="reviews">
+            <h2>Reviews from my Teachers</h2>
+            <div>
+                <blockquote>
+                    <p>John Doe was a brilliant student; always stood out with his assignments</p>
+                    <footer>Jane Doe <cite>Assistant Professor</cite></footer>
+                </blockquote>
+                <blockquote>
+                    <p>John Doe was a brilliant student; always stood out with his assignments</p>
+                    <footer>Jane Doe <cite>Assistant Professor</cite></footer>
+                </blockquote>
+                <blockquote>
+                    <p>John Doe was a brilliant student; always stood out with his assignments</p>
+                    <footer>Jane Doe <cite>Assistant Professor</cite></footer>
+                </blockquote>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> all rights reserved</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
